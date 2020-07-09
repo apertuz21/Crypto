@@ -18,6 +18,8 @@ const getXMLfromText = document.getElementById("txt-xml")
 const getTextFromXML = document.getElementById("xml-txt")
 const getJWTfromText = document.getElementById("txt-jwt")
 const getTextFromJWT = document.getElementById("jwt-txt")
+const textFromJSON = document.getElementById("json-txt")
+const getJSONfromText = document.getElementById("txt-json")
 
 
 // INPUT DATA EVENTS
@@ -185,6 +187,55 @@ getTextFromJWT.addEventListener("click", e => {
         } else {
             alert("Ingrese una clave para descifrar con JWT su texto")
         }
+    } else {
+        alert(validation)
+    }
+}, false)
+
+textFromJSON.addEventListener("click", e => {
+
+    let validation = validate("json")
+
+    if (!validation) {
+
+        let json = result
+        let text = getTextFromJSON(JSON.parse(json))
+
+        document.getElementById("output-textarea").innerHTML = text
+        download("response-fromjson.txt", text)
+
+        
+    } else {
+        alert(validation)
+    }
+}, false)
+
+getJSONfromText.addEventListener("click", e => {
+
+    let validation = validate("txt")
+
+    if (!validation) {
+        
+      let json = ""
+      let jsonBody = ""
+      let txtArray = result.split("\n")
+      txtArray.pop()
+
+      jsonBody = txtArray.map(elem => {
+
+          elemArray = elem.split(delim)
+
+          return "{\"documento\":\"" + elemArray[0] + "\",\"primer-nombre\":\"" + elemArray[1] +
+              "\",\"apellido\":\"" + elemArray[2] + "\",\"credit-card\":\"" + elemArray[3] +
+              "\",\"tipo\":\"" + elemArray[4] + "\",\"telefono\":\"" + elemArray[5] + "\"}"
+
+      })
+
+      json = "[" + jsonBody + "]"
+
+      document.getElementById("output-textarea").innerHTML = json
+      download("responseJSON.json", json)
+
     } else {
         alert(validation)
     }
