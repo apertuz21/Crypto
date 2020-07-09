@@ -1,5 +1,7 @@
 # Crypto
 
+HECHO POR: ANTONIO ALEXIS PERTUZ AREVALO 00267016
+
 Crypto es un programa que le permite encripar o desencriptar el contenido de archivos de texto, xml y json (con formato JWT). El contenido de los archivos de texto van separados por delimitadores que usted decide.
 En el primer cuadro usted va a visualizar el documento que suba, en el otro cuadro va a visualizar el resultado con la posibilidad de descargarlo.
 
