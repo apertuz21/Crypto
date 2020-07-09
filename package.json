@@ -1,0 +1,16 @@
+{
+  "name": "encrypting",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo js/index.js:bundle.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "budo": "^11.2.2"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
+}

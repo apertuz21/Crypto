@@ -1,0 +1,355 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  font-size: 16px;
+  font-family: Lato;
+}
+
+.h-container {
+  display: flex;
+}
+
+input[type="file"]#upload-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+/*label[for="upload-input"] {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4d8cf2;
+  border-radius: 9px;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 15px 30px !important;
+  text-transform: uppercase;
+  width: fit-content;
+  text-align: center;
+}*/
+
+label[for="upload-input"] {
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4d8cf2;
+  border-radius: 9px;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 10px !important;
+  text-transform: uppercase;
+  width: fit-content;
+  text-align: center;
+}
+
+label[for="upload-input"]:before {
+  content: url("https://api.iconify.design/heroicons-outline:upload.svg?color=white&height=24");
+  vertical-align: middle;
+}
+
+label[for="upload-input"]:hover {
+  background-color: #3b73ce;
+  border-color: #729fe7;
+}
+
+.ui-input-container {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 4px;
+  width: 50%;
+  margin: 0 auto;
+}
+.ui-input-container h2 {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.ui-form-input-container {
+  position: relative;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  display: block;
+}
+.ui-form-input {
+  padding: 13px 15px;
+  border-radius: 8px;
+  border: 2px solid #1a73e8;
+  outline: 0;
+  width: 100%;
+}
+
+.form-input-label {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  color: #1a73e8;
+  font-size: 0.85rem;
+  padding-right: 0.33rem;
+  padding-left: 0.33rem;
+  background: #fff;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.ui-form-btn {
+  padding: 13px 15px;
+  border-radius: 8px;
+  background: #1a73e8;
+  outline: 0;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+.error .ui-form-input,
+.error .form-input-label {
+  border-color: #d50000;
+  color: #d50000;
+}
+
+textarea {
+  min-height: 25em;
+  max-height: 50vh;
+  width: 100%;
+}
+
+.upload-button {
+  display: flex;
+  justify-content: start;
+  margin-top: 2%;
+}
+
+.download-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.dwn-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4d8cf2;
+  border-radius: 9px;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 15px 30px !important;
+  text-transform: uppercase;
+  width: fit-content;
+  text-align: center;
+  border-width: 0 !important;
+}
+
+.dwn-btn:hover {
+  background-color: #3b73ce;
+  border-color: #729fe7;
+}
+
+.h-container.upload {
+  align-items: center;
+}
+
+.upload-info {
+  margin-left: 10px;
+  color: #aaa;
+  border: 1px solid;
+}
+
+.text-container {
+  color: rgba(0, 0, 0, 0.77);
+  font-weight: 600;
+  padding: 3rem;
+  width: 70%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.text-container .title {
+  font-size: 3em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 24px;
+}
+
+:focus {
+  outline: none;
+}
+
+.col-3 {
+  float: left;
+  width: 10.3%;
+  align-items: center;
+  position: relative;
+  margin-left: 5px;
+} /* necessary to give position: relative to parent. */
+input[type="text"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.effect-1,
+.effect-2,
+.effect-3 {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+  flex: 1;
+}
+
+.effect-2 ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+.effect-2:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+
+.delimitador-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.delimitador-wrapper p {
+  color: #333;
+  font-family: Lato;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #4d8cf2;
+  border-color: #2e6da4;
+  margin-right: 5px;
+}
+
+.btn-primary.outline {
+  color: #428bca;
+}
+
+.outline {
+  background-color: transparent;
+  color: inherit;
+  transition: all 0.25s;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #4d8cf2;
+  border-color: #729fe7;
+}
+
+.btn-primary.outline:hover {
+  color: #fff;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+.options-wrapper {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.options-wrapper div p {
+  color: #333;
+  font-family: Lato;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.key-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.key-wrapper p {
+  color: #333;
+  font-family: Lato;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.key-wrapper .col-3 {
+  width: 50%;
+}

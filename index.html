@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  </head>
+
+  <body>
+    <div class="text-container">
+      <p class="title">Crypto</p>
+      <p aria-live="polite">
+        Crypto es un programa que le permite encripar o desencriptar el
+        contenido de archivos de texto, xml y json (con formato JWT). El contenido de 
+        los archivos de texto van separados por delimitadores que usted decide. 
+        <br> En el primer cuadro usted va a visualizar el documento que suba, en el otro 
+        cuadro va a visualizar el resultado con la posibilidad de descargarlo. <br /><br />
+        Para ocupar Crypto siga los siguientes pasos: <br>
+        <ul>
+          <li>Suba el archivo con el contenido que desea encriptar/desencriptar, seleccionando el botón que esté abajo del cuadro de texto referente al archivo de entrada.</li>
+          <li>Asegurese de digitar el separador del archivo de texto y la clave para cifrar/descifrar </li>
+          <li>Si su archivo de entrada o salida es XML, la clave tiene que ser númerica.</li>
+          <li>Seleccione el botón con la opción que desee procesar</li>
+        </ul>
+        <br>
+        El programa automáticamente detectará el tipo de archivo y desencriptará o 
+        encriptará según sea el caso. 
+        </strong>
+      </p>
+    </div>
+    <div class="h-container">
+      <div class="ui-input-container">
+        <div>
+          <h2>Archivo de entrada</h2>
+          <label class="ui-form-input-container">
+            <textarea
+              class="ui-form-input"
+              id="input-textarea"
+              disabled
+            ></textarea>
+            <span class="form-input-label">Message</span>
+          </label>
+           <!--<p aria-live="polite">
+            <strong><span id="word-count">0</span> words</strong> |
+            <strong><span id="character-count">0</span> characters</strong>
+          </p>-->
+        </div>
+        <div class="upload-button">
+          <span class="upload-input">
+            <input type="file" name="upload-input" id="upload-input" />
+          </span>
+          <div class="h-container upload">
+            <label for="upload-input">
+              <span id="upload-file-name">Selecciona un archivo</span>
+            </label>
+            <div class="delimitador-wrapper">
+              <p>Digite un delimitador: </p>
+              <div class="col-3">
+                <input id="delimiter" class="effect-2" style="text-align: center;" type="text" maxlength="1" placeholder=";" />
+                <span class="focus-border"></span>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="key-wrapper">
+          <div>
+            <p style="padding: 15px 0;">Digite clave númerica para xml: </p>
+            <p>Digite una clave para jwt: </p>
+          </div>
+
+          <div>
+            <div class="col-3 key-col">
+              <input id="key-xml" style="text-align: center;" class="effect-2" type="text" placeholder="clave" />
+              <span class="focus-border"></span>
+            </div>
+
+            <div class="col-3 key-col">
+              <input id="key-jwt" style="text-align: center;" class="effect-2" type="text" placeholder="clave" />
+              <span class="focus-border"></span>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="options-wrapper">
+          <div>
+            <p>Seleccione el tipo de procesamiento</p>
+          </div>
+          <div>
+            <button id="txt-xml" class="btn btn-primary outline">TXT to XML</button>
+            <button id="xml-txt" class="btn btn-primary outline">XML to TXT</button>
+            <button id="txt-jwt" class="btn btn-primary outline">TXT to JWT</button>
+            <button id="jwt-txt" class="btn btn-primary outline" style="margin-right: 0;">JWT to TXT</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-input-container">
+        <div>
+          <h2>Archivo de salida</h2>
+          <label class="ui-form-input-container">
+            <textarea
+              class="ui-form-input"
+              id="output-textarea"
+              disabled
+            ></textarea>
+            <span class="form-input-label">Message</span>
+          </label>
+         <!-- <p aria-live="polite">
+            <strong><span id="word-count">0</span> words</strong> |
+            <strong><span id="character-count">0</span> characters</strong>.
+          </p> -->
+        </div>
+        <div class="download-button">
+          <a id="download">
+            <button id="dwn-btn" class="dwn-btn" type="button" disabled>
+              Descargar
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- scrips -->
+    <script src="bundle.js" charset="utf-8"></script>
+  </body>
+</html>
